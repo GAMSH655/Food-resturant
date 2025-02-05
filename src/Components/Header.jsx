@@ -5,7 +5,7 @@ import  Basket from "../assets/Basket.svg"
 import Forward from "../assets/Forward.svg"
 import Logo from "../assets/Logo.png"
 import { NavLink } from 'react-router-dom';
-import { FaUser } from 'react-icons/fa';
+import {FaUserCircle } from 'react-icons/fa';
 const Header = () => {
     const NavLinks = [
         {Link: "Home", path: "#"},
@@ -40,21 +40,22 @@ const Header = () => {
          </div>
       </div>
     </div>
-    <div className="mt-[30px]">
+   
+   
+    <div className="mt-[30px] flex justify-between items-center">
     <img src={Logo} alt="" className='max-w-full h-auto'/>
-    <nav className="">
+    <nav className=" mt-[20px]">
     {NavLinks.map((link, index) => (
         <a 
         href={link.path} 
         key={index} 
-         className="text-xl font-normal capitalize text-gray-800 p-5 hover:text-orange-500 transition duration-300">
+         className=" text-xl font-normal capitalize text-gray-800 p-5 hover:text-orange-500 transition duration-300">
         {link.Link}
         </a>
     ))}
-    </nav>
-
-          <button className='flex '> 
-            <FaUser className='m-2'/> login / sing up
+          </nav>
+          <button className='flex bg-[#03081F] rounded-full text-white capitalize font-normal p-3 m-2 w-[180px]'> 
+            <FaUserCircle className='mr-[9px] mt-[4px] text-[#FC8A06]'/> login / singup
           </button>
     </div>
    
