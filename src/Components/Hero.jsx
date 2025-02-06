@@ -14,10 +14,11 @@ const Hero = () => {
         Feast Your Senses,
         <span className="text-[#FC8A06]  text-center md:text-left block">Fast and Fresh</span>
       </h3>
-      <p className="">Enter a postcode to see what we deliver</p>
+      <p className="text-center md:text-left">Enter a postcode to see what we deliver</p>
 
       {/* Search Bar */}
-      <div className="flex items-center border border-gray-300 rounded-full overflow-hidden max-w-md mt-4">
+     <div className="flex justify-center items-center md:flex-start">
+     <div className="flex items-center border border-gray-300 rounded-full overflow-hidden max-w-md mt-4">
         <input 
           type="text" 
           placeholder="Search..." 
@@ -27,6 +28,7 @@ const Hero = () => {
           Search
         </button>
       </div>
+     </div>
     </div>
 
     {/* Right Image Section */}
