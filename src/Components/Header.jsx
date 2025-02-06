@@ -1,5 +1,5 @@
 import React from 'react'
-import {FaBars , FaStar} from 'react-icons/fa'
+import {FaBars , FaStar , FaTimes} from 'react-icons/fa'
 import { FaLocationDot } from "react-icons/fa6";
 import  Basket from "../assets/Basket.svg"
 import Forward from "../assets/Forward.svg"
@@ -48,9 +48,9 @@ const Header = () => {
     </div>
    
    
-    <div className="mt-[30px] flex justify-between items-center p-[0px] md:p-[50px">
+    <div className="mt-[30px] flex justify-between items-center p-[0px] md:p-[25px] shadow-md   bg-[white]">
     <img src={Logo} alt="" className='max-w-full h-auto'/>
-    <nav className=" mt-[20px]">
+    <nav className=" mt-[20px]  flex ">
     {NavLinks.map((link, index) => (
         <a 
         href={link.path} 
@@ -65,7 +65,9 @@ const Header = () => {
           </button>
 
           <button className=" block md:hidden font-bold text-[2.5rem] p-2" onClick={handleMenu}>
-            <FaBars/>
+           {
+            openMenu ? <FaTimes/> : <FaBars/>
+           }
           </button>
     </div>
 
@@ -74,7 +76,7 @@ const Header = () => {
       openMenu && (
         
     <div className="">
-    <nav className=" mt-[20px] text-center">
+    <nav className=" mt-[20px]   bg-[white] text-center ">
     {NavLinks.map((link, index) => (
         <a 
         href={link.path} 
@@ -84,7 +86,7 @@ const Header = () => {
         </a>
     ))}
           </nav>
-          <div className="flex justify-center">
+          <div className="md:hidden flex justify-center">
           <button className='flex bg-[#03081F] rounded-full text-white capitalize font-normal p-3 m-2 w-[180px]'> 
             <FaUserCircle className='mr-[9px] mt-[4px] text-[#FC8A06]'/> login / singup
           </button>
