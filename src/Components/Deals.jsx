@@ -56,7 +56,7 @@ const Deals = () => {
 
         </div>
         <div className="parent">
-      <Carousel
+      {/* <Carousel
         responsive={responsive}
         autoPlay={false}
         swipeable={true}
@@ -85,7 +85,7 @@ const Deals = () => {
        <img src={ChefBurger} alt=""  />
        </div>
       
-      </Carousel>
+      </Carousel> */}
     </div>
       <div className="p-[30px]">
       <h3 className="md:text-[32px] font-bold">
