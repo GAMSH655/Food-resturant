@@ -1,5 +1,5 @@
 import React , {useState} from 'react'
-import ChefBurger from "../../src/assets/ChefBurger.png"
+import ChefBurger from "../assets/ChefBurger.png"
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import foodData from '../../src/Components/FoodData';
