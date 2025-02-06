@@ -1,5 +1,5 @@
 import React , {useState} from 'react'
-import ChefBurger from "../assets/ChefBurger.png"
+import Bug from "../assets/Bug.png"
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import foodData from '../../src/Components/FoodData';
@@ -67,22 +67,22 @@ const Deals = () => {
         dotListClass="custom-dot-list-style"
       >
        <div className='slider'>
-       <img src={ChefBurger} alt=""  />
+       <img src={ Bug } alt=""  />
        </div>
        <div className='slider'>
-       <img src={ChefBurger} alt=""  />
+       <img src={ Bug } alt=""  />
        </div>
        <div className='slider'>
-       <img src={ChefBurger} alt=""  />
+       <img src={ Bug } alt=""  />
        </div>
        <div className='slider'>
-       <img src={ChefBurger} alt=""  />
+       <img src={ Bug } alt=""  />
        </div>
        <div className='slider'>
-       <img src={ChefBurger} alt=""  />
+       <img src={ Bug } alt=""  />
        </div>
        <div className='slider'>
-       <img src={ChefBurger} alt=""  />
+       <img src={ Bug } alt=""  />
        </div>
       
       </Carousel>
