@@ -1,9 +1,7 @@
 import React , {useState} from 'react'
-import ChefBurger from "../assets/ChefBurger.png"
-import Grand from "../assets/Grand.png"
+import ChefBurger from "../../src/assets/ChefBurger.png"
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import FoodData from "../../src/Components/FoodData"
 import foodData from '../../src/Components/FoodData';
 const Deals = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -89,7 +87,8 @@ const Deals = () => {
       
       </Carousel>
     </div>
-    <h3 className="md:text-[32px] font-bold">
+      <div className="p-[30px]">
+      <h3 className="md:text-[32px] font-bold">
                 Order.uk Popular Categories 🤩
             </h3>
 
@@ -107,16 +106,17 @@ const Deals = () => {
          >
            {foodData.map(({foodImg, FoodName , ResturantNums}, index) => {
              return (
-               <div className="slider" key={index}>
+               <div className="slider bg-[#F5F5F5] rounded-t-full" key={index}>
                  <img src={foodImg} alt="movie" />
-                 <h3 className="">{FoodName}</h3>
-                 <p className="">{ResturantNums}</p>
+                 <h3 className="font-bold text-[1.5rem] p-3">{FoodName}</h3>
+                 <p className="text-[#FC8A06] font-normal text-l  p-3">{ResturantNums}</p>
                </div>
              );
            })}
          </Carousel>
        </div>
        }
+      </div>
     </div>
   )
 }
