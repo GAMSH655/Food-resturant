@@ -1,4 +1,4 @@
-import Soup from "../assets/Soup.png"
+import Soup from "../../src/assets/Soup.png"
 import Pasta from "../assets/Pasta.png"
 import Pizza from "../assets/Pizza.png"
 import Salad from "../assets/Salad.png"
