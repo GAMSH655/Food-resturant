@@ -3,6 +3,13 @@ import Bug from "../assets/Bug.png"
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import foodData from '../../src/Components/FoodData';
+import Marquee from "react-fast-marquee";
+import King from "../assets/King.png"
+import Texas from "../assets/Texas.png"
+import Shauma from "../assets/Shauma.png"
+import Donald from  "../assets/Donald.png"
+import John from "../assets/John.png"
+import Kfc from "../assets/Kfc.png"
 const Deals = () => {
     const [isOpen, setIsOpen] = useState(false);
     const responsive = {
@@ -60,7 +67,7 @@ const Deals = () => {
         <div className="parent">
       <Carousel
         responsive={responsive}
-        autoPlay={false}
+        autoPlay={true}
         swipeable={true}
         draggable={true}
         showDots={false}
@@ -69,22 +76,22 @@ const Deals = () => {
         dotListClass="custom-dot-list-style"
       >
        <div className='slider'>
-       <img src={ Bug } alt=""  />
+       <img src={ Bug } alt=""  draggable="false" />
        </div>
        <div className='slider'>
-       <img src={ Bug } alt=""  />
+       <img src={ Bug } alt=""  draggable="false" />
        </div>
        <div className='slider'>
-       <img src={ Bug } alt=""  />
+       <img src={ Bug } alt=""  draggable="false" />
        </div>
        <div className='slider'>
-       <img src={ Bug } alt=""  />
+       <img src={ Bug } alt=""  draggable="false"  />
        </div>
        <div className='slider'>
-       <img src={ Bug } alt=""  />
+       <img src={ Bug } alt=""  draggable="false" />
        </div>
        <div className='slider'>
-       <img src={ Bug } alt=""  />
+       <img src={ Bug } alt=""  draggable="false"  />
        </div>
       
       </Carousel>
@@ -97,19 +104,19 @@ const Deals = () => {
        {
          <div className="parent">
          <Carousel
-           responsive={responsive}
-           autoPlay={false}
-           swipeable={true}
-           draggable={true}
-           showDots={false}
-           infinite={true}
-           partialVisible={false}
+          responsive={responsive}
+          autoPlay={true}
+          swipeable={true}
+          draggable={true}
+          showDots={false}
+          infinite={true}
+          partialVisible={false}
            dotListClass="custom-dot-list-style"
          >
            {foodData.map(({foodImg, FoodName , ResturantNums}, index) => {
              return (
                <div className="slider bg-[#F5F5F5] rounded-t-full" key={index}>
-                 <img src={foodImg} alt="movie" />
+                 <img src={foodImg} alt="movie"  draggable="false" />
                  <h3 className="font-bold text-[1.5rem] p-3">{FoodName}</h3>
                  <p className="text-[#FC8A06] font-normal text-l  p-3">{ResturantNums}</p>
                </div>
@@ -119,6 +126,27 @@ const Deals = () => {
        </div>
        }
       </div>
+
+    <Marquee>
+      <div className="m-[10px]">
+      <img src={Donald} alt="" draggable="false" />
+      </div>
+      <div className="m-[10px]">
+      <img src={John} alt=""  draggable="false"  />
+      </div>
+      <div className="m-[10px]">
+      <img src={Kfc} alt=""   draggable="false" />
+      </div>
+      <div className="m-[10px]">
+      <img src={Texas} alt=""  draggable="false"  />
+      </div>
+      <div  className="m-[10px]">
+      <img src={King} alt=""   draggable="false" />
+      </div>
+      <div  className="m-[10px]">
+      <img src={Shauma} alt=""  draggable="false"   />
+      </div>
+    </Marquee>
     </div>
   )
 }

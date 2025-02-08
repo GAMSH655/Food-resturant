@@ -4,7 +4,6 @@ import Pizza from "../assets/Pizza.png"
 import Salad from "../assets/Salad.png"
 import Break from "../assets/Break.png"
 import Burger from "../assets/Burger.png"
-
 const foodData = [
  {foodImg:Soup, FoodName:"soup" , ResturantNums:"21 resturants"},
  {foodImg:Pasta, FoodName:"Pasta" , ResturantNums:"32 resturants"},
@@ -14,4 +13,12 @@ const foodData = [
  {foodImg:Burger, FoodName:"Burger" , ResturantNums:" 40 resturants"},
 ]
 
-export default foodData;
+// const ResturantImgs = [
+//  {ResturantImg:King},
+//  {ResturantImg:Texas},
+//  {ResturantImg:Shauma},
+//  {ResturantImg:John},
+//  {ResturantImg:Kfc},
+// ]
+
+export default foodData
