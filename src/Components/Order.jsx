@@ -1,33 +1,115 @@
-import React from 'react'
-import Couples from "../assets/Couples.png"
-import Logo from "../assets/Logo.png"
-import Store from "../assets/Store.png"
+import React from "react";
+import Couples from "../assets/Couples.png";
+import Logo from "../assets/Logo.png";
+import Store from "../assets/Store.png";
+import Partner from "../assets/Partner.png";
+import Ride from "../assets/Ride.png";
+import Marquee from "react-fast-marquee";
+import {foodData, FaqsContents} from "../Components/FoodData"
 const Order = () => {
+  const ListStyles = () => {
+    return "hidden md:block capitalize hover:font-bold hover:p-[6px] hover:border-2 hover:border-[#FC8A06] rounded-full m-[10px]";
+  };
+  const FaqStyles = () => {
+    return " md:block capitalize font-bold p-[6px] hover:bg-[#FC8A06] rounded-full m-[10px] text-center hover:scale-105 hover:shadow-lg transition-transform duration-200";
+  };
+  
+
+  const ArrayLink = [
+    "Frequent questions",
+    "Who we are",
+    "Partner program",
+    "Partner support",
+  ];
+
+  const Faqs = [
+    "How does order.uk work?",
+    "What payment methods are accepted?",
+    "Can I track my orders in real-time?",
+    "Are there any special discounts or promotions available?",
+    "Is Order.UK available in my area?",
+  ];
+
   return (
     <div>
-       <div className="p-[0px] m-[0px] md:m-[50px] bg-[#A6A6A6] flex flex-wrap-reverse md:justify-evenly rounded-md ">
-        <img src={Couples} alt="" className='size-full md:size-1/2'  draggable="false" />
-        
-        <div className="mt-[50px]">
-        <div className="flex items-center justify-center">
-            <img src={Logo} alt="" className=' w-1/4 md:w-auto'   />
-            <span className='font-bold text-[2rem] md:text-[4rem] text-[#03081F]'>ing</span>
-             <span className='text-[#03081F] font-bold text-[2.5rem] p-[5px]'>is more</span>
-        </div>
-       <div className="p-[4px] md:p-[9px] bg-transparent md:bg-[#03081F] rounded-full ">
-        <h3 className="font-semibold text-[2rem] text-[#FC8A06] ml-[15px] underline capitalize">
-            personalised 
-            <span className="text-white">  & instant </span>
-        </h3>
-       </div>
-       <p className="text-[#03081F] text-xl m-5">
-       Download the Order.uk app for faster ordering
-       </p>
-       <img src={Store} alt="" className="" />
-       </div>
-       </div>
-    </div>
-  )
-}
+      <div className="p-0 m-0 md:m-[50px] bg-[#A6A6A6] flex flex-wrap-reverse md:justify-evenly rounded-md">
+        <img src={Couples} alt="" className="w-full md:w-1/2" draggable="false" />
 
-export default Order
+        <div className="mt-[50px]">
+          <div className="flex items-center justify-center">
+            <img src={Logo} alt="" className="w-1/4 md:w-auto" />
+            <span className="font-bold text-[2rem] md:text-[4rem] text-[#03081F]">
+              ing
+            </span>
+            <span className="text-[#03081F] font-bold text-[2.5rem] p-[5px]">
+              is more
+            </span>
+          </div>
+
+          <div className="p-[4px] md:p-[9px] bg-transparent md:bg-[#03081F] rounded-full">
+            <h3 className="font-semibold text-[2rem] text-[#FC8A06] ml-[15px] underline capitalize">
+              personalised <span className="text-white"> & instant </span>
+            </h3>
+          </div>
+
+          <p className="text-[#03081F] text-xl m-5">
+            Download the Order.uk app for faster ordering
+          </p>
+          <img src={Store} alt="" />
+        </div>
+      </div>
+
+      {/* Marquee Section */}
+      <Marquee>
+        <div className="m-[10px]">
+          <img src={Ride} alt="" draggable="false" className="w-1/2 md:w-full" />
+        </div>
+        <div className="m-[10px]">
+          <img src={Partner} alt="" draggable="false" className="w-1/2 md:w-full" />
+        </div>
+        <div className="m-[10px]">
+          <img src={Ride} alt="" draggable="false" className="w-1/2 md:w-full" />
+        </div>
+        <div className="m-[10px]">
+          <img src={Partner} alt="" draggable="false" className="w-1/2 md:w-full" />
+        </div>
+      </Marquee>
+
+      {/* Information Section */}
+      <div className="bg-[#A6A6A6] rounded-lg flex flex-col md:flex-row justify-between m-[40px] p-4">
+        <h3 className="font-bold text-[2rem] ml-[15px]">Know more about us</h3>
+        <div className="flex flex-col md:flex-row gap-4">
+          {ArrayLink.map((item, index) => (
+            <a href="#" key={index} className={ListStyles()}>
+              {item}
+            </a>
+          ))}
+        </div>
+      </div>
+     <div className="flex ">
+     <div className="bg-white  p-8  m-4 rounded-lg">
+        {Faqs.map((item, index) => (
+          <p  key={index} className={FaqStyles()}>
+            {item}
+          </p>
+        ))}
+      </div>
+      <div className="  block md:flex md:justify-between  mt-7">
+        {FaqsContents.map(({ faqImg, faqTitle, faqText }, index) => (
+          <div key={index} className="m-[20px] p-[10px] bg-[#D9D9D9]  rounded-md">
+             <p className="font-bold text-center p-3 text-[1rem]">{faqTitle}</p>
+            <div className="flex justify-center p-5 items-center">
+            <img src={faqImg} alt="" className="w-1/2 md:w-[150px]] " />
+            </div>
+            <div>
+              <p className="text-[#03081F] font-bold  text-center">{faqText}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+     </div>
+    </div>
+  );
+};
+
+export default Order;
