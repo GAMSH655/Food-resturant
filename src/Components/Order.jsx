@@ -8,10 +8,10 @@ import Marquee from "react-fast-marquee";
 import {foodData, FaqsContents} from "../Components/FoodData"
 const Order = () => {
   const ListStyles = () => {
-    return "hidden md:block capitalize hover:font-bold hover:p-[6px] hover:border-2 hover:border-[#FC8A06] rounded-full m-[10px]";
+    return "hidden md:block capitalize hover:font-bold p-[6px] hover:border-2 hover:border-[#FC8A06] rounded-full m-[10px]";
   };
   const FaqStyles = () => {
-    return " md:block capitalize font-bold p-[6px] hover:bg-[#FC8A06] rounded-full m-[10px] text-center hover:scale-105 hover:shadow-lg transition-transform duration-200";
+    return " md:block capitalize font-bold p-[6px] hover:bg-[#FC8A06]  mt-[9px] rounded-full text-xs text-center hover:scale-105 hover:shadow-lg transition-transform duration-200";
   };
   
 
@@ -76,7 +76,11 @@ const Order = () => {
       </Marquee>
 
       {/* Information Section */}
-      <div className="bg-[#A6A6A6] rounded-lg flex flex-col md:flex-row justify-between m-[40px] p-4">
+     
+
+
+     <div className="bg-[#D9D9D9] rounded-lg m-[20px] p-[20px]">
+     <div className=" flex flex-col md:flex-row justify-between m-[40px] p-4">
         <h3 className="font-bold text-[2rem] ml-[15px]">Know more about us</h3>
         <div className="flex flex-col md:flex-row gap-4">
           {ArrayLink.map((item, index) => (
@@ -86,27 +90,32 @@ const Order = () => {
           ))}
         </div>
       </div>
-     <div className="flex ">
-     <div className="bg-white  p-8  m-4 rounded-lg">
+       
+     <div className="flex flex-col md:flex-row justify-between bg-white rounded-lg md:m-[50px] ">
+     <div className=" p-8  m-4 rounded-lg">
         {Faqs.map((item, index) => (
           <p  key={index} className={FaqStyles()}>
             {item}
           </p>
         ))}
       </div>
-      <div className="  block md:flex md:justify-between  mt-7">
-        {FaqsContents.map(({ faqImg, faqTitle, faqText }, index) => (
-          <div key={index} className="m-[20px] p-[10px] bg-[#D9D9D9]  rounded-md">
+      <div className="  ">
+       <div className="block md:flex md:justify-between  mt-7">
+       {FaqsContents.map(({ faqImg, faqTitle, faqText }, index) => (
+          <div key={index} className="m-[20px] bg-[#03081F] md:bg-[#D9D9D9]  rounded-md">
              <p className="font-bold text-center p-3 text-[1rem]">{faqTitle}</p>
             <div className="flex justify-center p-5 items-center">
             <img src={faqImg} alt="" className="w-1/2 md:w-[150px]] " />
             </div>
             <div>
-              <p className="text-[#03081F] font-bold  text-center">{faqText}</p>
+              <p className="text-[#03081F] font-bold m-[8px] text-center">{faqText}</p>
             </div>
           </div>
         ))}
+       </div>
+       <p className="text-center p-[10px]">Order.UK simplifies the food ordering process. Browse through our diverse menu, select your favorite dishes, and proceed to checkout. Your delicious meal will be on its way to your doorstep in no time!</p>
       </div>
+     </div>
      </div>
     </div>
   );
