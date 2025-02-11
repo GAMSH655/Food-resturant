@@ -17,7 +17,7 @@ const Hero = () => {
       <p className="text-center md:text-left">Enter a postcode to see what we deliver</p>
 
       {/* Search Bar */}
-     <div className="flex justify-center items-center md:flex-start">
+     <div className="flex justify-center in-checked: md:block ">
      <div className="flex items-center border border-gray-300 rounded-full overflow-hidden max-w-md mt-4">
         <input 
           type="text" 
