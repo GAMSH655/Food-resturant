@@ -61,7 +61,7 @@ const Order = () => {
       </div>
 
       {/* Marquee Section */}
-      <Marquee>
+      <Marquee autoFill={false} gradient={false} speed={40}>
         <div className="m-[10px]">
           <img src={Ride} alt="" draggable="false" className="w-1/2 md:w-full" />
         </div>
@@ -80,9 +80,9 @@ const Order = () => {
      
 
 
-     <div className="bg-[#D9D9D9] rounded-lg m-[20px] p-[20px]">
+     <div className="bg-[#D9D9D9] rounded-lgmd:m-[20px] p-[20px]">
      <div className=" flex flex-col md:flex-row justify-between m-[40px] p-4">
-        <h3 className="font-bold text-[2rem] ml-[15px]">Know more about us</h3>
+        <h3 className="font-bold text-2xl md:text-[2rem]  ml-[0px] md:ml-[15px]">Know more about us</h3>
         <div className="flex flex-col md:flex-row gap-4">
           {ArrayLink.map((item, index) => (
             <a href="#" key={index} className={ListStyles()}>
@@ -92,8 +92,8 @@ const Order = () => {
         </div>
       </div>
        
-     <div className="flex flex-col md:flex-row justify-between bg-[#03081F] text-white md:text-black md:bg-white rounded-lg md:m-[50px] ">
-     <div className=" p-8  m-4 rounded-lg">
+     <div className="flex flex-col md:flex-row justify-between bg-[#03081F] text-white md:text-black md:bg-white rounded-lg  md:m-[50px] ">
+     <div className=" p-8   m-4 m-[0px] rounded-lg">
         {Faqs.map((item, index) => (
           <p  key={index} className={FaqStyles()}>
             {item}
@@ -118,7 +118,7 @@ const Order = () => {
       </div>
      </div>
      </div>
-     <div className="  block md:flex flex-wrap md:flex-row items-center justify-center md:justify-between gap-6 m-10 bg-[#FC8A06] text-white rounded-lg p-6 md:p-10">
+     <div className="  block md:flex flex-wrap md:flex-row items-center justify-center md:justify-between gap-6 m-5 md:m-10 bg-[#FC8A06] text-white rounded-lg p-6 md:p-10">
   
      {[
   { value: "546+", label: "Registered Riders" },

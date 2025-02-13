@@ -2,7 +2,7 @@ import React , {useState} from 'react'
 import Bug from "../assets/Bug.png"
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import {foodData , FaqsContents} from '../../src/Components/FoodData';
+import {foodData , FaqsContents} from './FoodData';
 import Marquee from "react-fast-marquee";
 import King from "../assets/King.png"
 import Texas from "../assets/Texas.png"
