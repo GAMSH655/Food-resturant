@@ -1,9 +1,9 @@
 import React from 'react'
 import {FaBars , FaStar , FaTimes} from 'react-icons/fa'
 import { FaLocationDot } from "react-icons/fa6";
-import  Basket from "../assets/Basket.svg"
-import Forward from "../assets/Forward.svg"
-import Logo from "../assets/Logo.png"
+import  Basket from "../../assets/Basket.svg"
+import Forward from "../../assets/Forward.svg"
+import Logo from "../../assets/Logo.png"
 import { NavLink } from 'react-router-dom';
 import {FaUserCircle } from 'react-icons/fa';
 import { useState } from 'react';

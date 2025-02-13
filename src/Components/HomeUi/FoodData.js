@@ -1,12 +1,12 @@
-import Soup from "../../src/assets/Soup.png";
-import Pasta from "../assets/Pasta.png";
-import Pizza from "../assets/Pizza.png";
-import Salad from "../assets/Salad.png";
-import Break from "../assets/Break.png";
-import Burger from "../assets/Burger.png";
-import Order from "../assets/Order.png";
-import Food from "../assets/Food.png";
-import Orderfood from "../assets/Orderfood.png";
+import Soup from "../../assets/Soup.png";
+import Pasta from "../../assets/Pasta.png";
+import Pizza from "../../assets/Pizza.png";
+import Salad from "../../assets/Salad.png";
+import Break from "../../assets/Break.png";
+import Burger from "../../assets/Burger.png";
+import Order from "../../assets/Order.png";
+import Food from "../../assets/Food.png";
+import Orderfood from "../../assets/Orderfood.png";
 
 const foodData = [
   { foodImg: Soup, FoodName: "Soup", ResturantNums: "21 restaurants" },

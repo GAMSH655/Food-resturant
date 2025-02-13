@@ -1,9 +1,8 @@
 import React from 'react'
-import CheeseLady from "../assets/CheeseLady.png"
-import SpagLady from "../assets/SpagLady.png"
-import Order1 from "../assets/Order1.png"
-import Notification from "../assets/Notification.png"
-import '../assets/Hero.css'
+import CheeseLady from "../../assets/CheeseLady.png"
+// import SpagLady from "../../assets/SpagLady.png"
+// import Order1 from "../../assets/Order1.png"
+// import Notification from "../assets/Notification.png"
 const Hero = () => {
   return (
     <div className="block md:flex md:justify-between md:text-[#03081F] text-white bg-[#03081F] md:bg-[#E2E2E2] m-[10px] md:m-[30px] rounded-md shadow-md overflow-hidden">

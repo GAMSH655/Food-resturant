@@ -1,15 +1,15 @@
 import React , {useState} from 'react'
-import Bug from "../assets/Bug.png"
+import Bug from "../../assets/Bug.png"
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import {foodData , FaqsContents} from './FoodData';
 import Marquee from "react-fast-marquee";
-import King from "../assets/King.png"
-import Texas from "../assets/Texas.png"
-import Shauma from "../assets/Shauma.png"
-import Donald from  "../assets/Donald.png"
-import John from "../assets/John.png"
-import Kfc from "../assets/Kfc.png"
+import King from "../../assets/King.png"
+import Texas from "../../assets/Texas.png"
+import Shauma from "../../assets/Shauma.png"
+import Donald from  "../../assets/Donald.png"
+import John from "../../assets/John.png"
+import Kfc from "../../assets/Kfc.png"
 const Deals = () => {
     const [isOpen, setIsOpen] = useState(false);
     const responsive = {

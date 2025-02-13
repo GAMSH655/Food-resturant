@@ -1,11 +1,11 @@
 import React from "react";
-import Couples from "../assets/Couples.png";
-import Logo from "../assets/Logo.png";
-import Store from "../assets/Store.png";
-import Partner from "../assets/Partner.png";
-import Ride from "../assets/Ride.png";
+import Couples from "../../assets/Couples.png";
+import Logo from "../../assets/Logo.png";
+import Store from "../../assets/Store.png";
+import Partner from "../../assets/Partner.png";
+import Ride from "../../assets/Ride.png";
 import Marquee from "react-fast-marquee";
-import {foodData, FaqsContents} from "../Components/FoodData"
+import {foodData, FaqsContents} from "./FoodData"
 const Order = () => {
   const ListStyles = () => {
     return "hidden md:block capitalize hover:font-bold p-[6px] border-2 border-transparent hover:border-[#FC8A06] rounded-full m-[10px]";
@@ -65,7 +65,7 @@ const Order = () => {
         <div className="m-[10px]">
           <img src={Ride} alt="" draggable="false" className="w-1/2 md:w-full" />
         </div>
-        <div className="m-[10px]">
+        <div className="m-[10px]">e
           <img src={Partner} alt="" draggable="false" className="w-1/2 md:w-full" />
         </div>
         <div className="m-[10px]">
